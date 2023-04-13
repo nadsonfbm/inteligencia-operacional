@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head >
+		<title>I. O. - Painel de Controle</title>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="./style.css">
+		<link href='https://fonts.googleapis.com/css?family=Josefin Sans' rel='stylesheet'>
+		<script src="https://kit.fontawesome.com/90d23de173.js" crossorigin="anonymous"></script>
+		<script src="./script.js" defer></script>
+	</head>
+<body>
+	<header>
+		<h1 id="page-title">Inteligência Operacional</h1>
+		<div class="filters">
+			<label for="date-filter">Data:</label>
+			<input type="text" id="date-filter">
+			<label for="name-filter">Nome:</label>
+			<input type="text" id="name-filter">
+			<label for="order-by">Ordenar por:</label>
+			<select id="order-by">
+				<option value="falta">Falta</option>
+				<option value="data">Data</option>
+				<option value="item">Item</option>
+				<option value="rua">Rua</option>
+				<option value="urgencia">Urgência</option>
+				<option value="base">Base</option>
+				<option value="entregue">Entregue</option>
+			</select>
+			<label for="order-direction">Direção:</label>
+            <select id="order-direction">
+				<option value="asc">Ascendente</option>
+				<option value="desc">Descendente</option>
+			</select>
+			<button id="search-button">Buscar</button>
+		</div>
+	</header>
+	<main>
+		<aside class="sidebar">
+			<nav>
+				<ul>
+					<li class="menu-regional">
+						<a href="#">Estados</a>
+						<ul>
+							<!-- Estados -->
+							<!-- Mais Estados -->
+							<li class="state">
+								<a href="#">Paraná</a>
+								<ul>
+									<li class="client">
+										<a href="#">Boticário</a>
+										<ul>
+											<li class="contract">
+												<a href="#">Contrato 1</a>
+												<ul>
+													<li class="application">
+														<a href="#">Application 1</a>
+													</li>
+													<li class="application">
+														<a href="#">Application 2</a>
+													</li>
+												</ul>
+											</li>
+											<li class="contract">
+												<a href="#">Contrato 2</a>
+												<ul>
+													<li class="application">
+														<a href="#">Application 1</a>
+													</li>
+													<li class="application">
+														<a href="#">Application 2</a>
+													</li>
+												</ul>
+											</li>
+										</ul>	
+									</li>
+									<li class="client">
+										<a href="#">Electrolux</a>
+										<ul>
+											<li class="general">
+												<a href="#">Geral</a>
+												<ul>
+													<li class="dashboards">
+														<a href="#">Dashboards</a>
+													</li>
+												</ul>
+											</li>
+											<li class="inbounds">
+												<a href="#">Entradas</a>
+												<ul>
+													<li class="supply">
+														<a href="#">Abastecimento</a>
+														<ul>
+															<li class="suplly-item">
+																<a href="#">Buffer</a>
+															</li>
+															<li class="suplly-item">
+																<a href="#">Torre de Controle</a>
+															</li>
+															<li class="suplly-item">
+																<a href="#">Histórico</a>
+															</li>
+														</ul>
+													</li>
+												</ul>
+											</li>
+											<li class="outbounds">
+												<a href="#">Saídas</a>
+												<ul>
+													<li class="crp">
+														<a href="">CRP</a>
+														<ul>
+															<li class="crp-item">
+																<a href="">Produção</a>
+															</li>
+															<li class="crp-item">
+																<a href="">Visão Geral</a>
+															</li>
+															<li class="crp-item">
+																<a href="">Custeio</a>
+															</li>
+															<li class="crp-item">
+																<a href="">Ci - Check Apontamentos</a>
+															</li>
+															<li class="crp-item">
+																<a href="">Small - Check Apontamentos</a>
+															</li>
+															<li class="crp-item">
+																<a href="">Avarias Depósito</a>
+															</li>
+															<li class="crp-item">
+																<a href="">Devolução</a>
+															</li>
+															<li class="crp-item">
+																<a href="">Materiais</a>
+															</li>
+															<li class="crp-item">
+																<a href="">Sucateamento </a>
+															</li>												
+														</ul>
+													</li>
+												</ul>
+											</li>
+										</ul>
+									</li>
+									<li class="client">
+										<a href="#">Fiep</a>
+									</li>
+									<li class="client">
+										<a href="#">Indireto</a>
+									</li>
+									<li class="client">
+										<a href="#">Inspira Business</a>
+									</li>
+									<li class="client">
+										<a href="#">Renault</a>
+									</li>
+								</ul>
+							</li>					
+							<!-- Mais Estados -->
+							<li class="state">
+								<a href="#">Santa Catarina</a>
+								<ul>
+									<li class="client">
+										<a href="#">Britania Eletrônicos</a>
+									</li>
+									<li class="client">
+										<a href="#">CIA / Hering</a>
+									</li>
+									<li class="client">
+										<a href="#">Portonave</a>
+									</li>
+									<li class="client">
+										<a href="#">Rigesa</a>
+									</li>
+									<li class="client">
+										<a href="#">Siemens</a>
+									</li>
+									<li class="client">
+										<a href="#">Whirlpool</a>
+									</li>
+								</ul>
+							</li>
+							<!-- Mais Estados -->
+						</ul>
+					</li>
+					<li class="tools"><a href="#">Ferramentas</a>
+						<ul>
+							<li class="user">
+								<a href="#">Usuário</a>
+								<ul>
+									<li class="control">
+										<a href="#">Controle</a>
+										<ul>
+											<li class="control-access">
+												<a href="#">Controle de Acesso</a>
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</nav>		
+		</aside>
+	</main>
+	<footer>
+		<p>Grupo GPS &copy; 2023 - Desenvolvido por Nome do Desenvolvedor</p>
+	</footer>
+</body>
+</html>
