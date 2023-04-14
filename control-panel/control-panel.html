@@ -1,40 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head >
-		<title>I. O. - Painel de Controle</title>
-		<meta charset="UTF-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link rel="stylesheet" type="text/css" href="./style.css">
-		<link href='https://fonts.googleapis.com/css?family=Josefin Sans' rel='stylesheet'>
-		<script src="https://kit.fontawesome.com/90d23de173.js" crossorigin="anonymous"></script>
-		<script src="./script.js" defer></script>
-	</head>
+<head>
+	<title>I. O. - Painel de Controle</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="./style.css">
+	<link href='https://fonts.googleapis.com/css?family=Josefin Sans' rel='stylesheet'>
+	<script src="https://kit.fontawesome.com/90d23de173.js" crossorigin="anonymous"></script>
+	<script src="./script.js" defer></script>
+</head>
 <body>
 	<header>
-		<h1 id="page-title">Inteligência Operacional</h1>
-		<div class="filters">
-			<label for="date-filter">Data:</label>
-			<input type="text" id="date-filter">
-			<label for="name-filter">Nome:</label>
-			<input type="text" id="name-filter">
-			<label for="order-by">Ordenar por:</label>
-			<select id="order-by">
-				<option value="falta">Falta</option>
-				<option value="data">Data</option>
-				<option value="item">Item</option>
-				<option value="rua">Rua</option>
-				<option value="urgencia">Urgência</option>
-				<option value="base">Base</option>
-				<option value="entregue">Entregue</option>
-			</select>
-			<label for="order-direction">Direção:</label>
-            <select id="order-direction">
-				<option value="asc">Ascendente</option>
-				<option value="desc">Descendente</option>
-			</select>
-			<button id="search-button">Buscar</button>
+		<div class="header-content">
+			<button id="toggle-sidebar">≡</button>
+			<h1 id="page-title">Inteligência Operacional</h1>
 		</div>
+		<div id="control-panel">Painel de Controle</div>
 	</header>
 	<main>
 		<aside class="sidebar">
@@ -73,7 +55,7 @@
 													</li>
 												</ul>
 											</li>
-										</ul>	
+										</ul>
 									</li>
 									<li class="client">
 										<a href="#">Electrolux</a>
@@ -93,13 +75,13 @@
 														<a href="#">Abastecimento</a>
 														<ul>
 															<li class="suplly-item">
-																<a href="#">Buffer</a>
+																<a href="#" onclick="loadBuffer()">Buffer</a>
 															</li>
 															<li class="suplly-item">
-																<a href="#">Torre de Controle</a>
+																<a href="#"> onclick="loadControlTower()">Torre de Controle</a>
 															</li>
 															<li class="suplly-item">
-																<a href="#">Histórico</a>
+																<a href="#"> onclick="loadHistoric()">Histórico</a>
 															</li>
 														</ul>
 													</li>
@@ -137,7 +119,7 @@
 															</li>
 															<li class="crp-item">
 																<a href="">Sucateamento </a>
-															</li>												
+															</li>
 														</ul>
 													</li>
 												</ul>
@@ -157,7 +139,7 @@
 										<a href="#">Renault</a>
 									</li>
 								</ul>
-							</li>					
+							</li>
 							<!-- Mais Estados -->
 							<li class="state">
 								<a href="#">Santa Catarina</a>
@@ -202,12 +184,16 @@
 							</li>
 						</ul>
 					</li>
+					<li class="logout">
+						<a href="../index.html">Sair do Painel</a>
+					</li>
 				</ul>
-			</nav>		
+			</nav>
 		</aside>
+		<div id="main-content"></div>
 	</main>
 	<footer>
-		<p>Grupo GPS &copy; 2023 - Desenvolvido por Nome do Desenvolvedor</p>
+		<p>Grupo GPS &copy; 2023 - Desenvolvido por Nadson Mendes</p>
 	</footer>
 </body>
 </html>

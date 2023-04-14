@@ -1,20 +1,21 @@
-/* const form = document.getElementById("login-form");
-        const submitButton = document.getElementById("submit-button");
+/* Validação de login */
 
-        submitButton.addEventListener("click", function(event) {
-            event.preventDefault(); // Evita o envio do formulário
-            validateAndRedirect();
-        });
+document.addEventListener("DOMContentLoaded", function () {
+    const loginForm = document.getElementById("login-form");
+    const usernameInput = document.getElementById("username");
+    const passwordInput = document.getElementById("password");
 
-        function validateAndRedirect() {
-            const username = document.getElementById("username").value;
-            const password = document.getElementById("password").value;
+    loginForm.addEventListener("submit", function (event) {
+        event.preventDefault();
 
-            // Verifica se os campos estão preenchidos
-            if (username.trim() !== "" && password.trim() !== "") {
-                // Redireciona para a URL desejada
-                window.location.href = "./control-panel/control-panel.html";
-            } else {
-                alert("Por favor, preencha corretamente o campo de usuário e senha.");
-            }
-        } */
+        const username = usernameInput.value;
+        const password = passwordInput.value;
+
+        // Validação de exemplo (substitua pela validação desejada)
+        if (username === "admin" && password === "12345") {
+            window.location.href = "./control-panel/control-panel.html";
+        } else {
+            alert("Usuário ou senha incorretos!");
+        }
+    });
+});

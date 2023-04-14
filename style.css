@@ -68,37 +68,43 @@ main {
 }
 
 .container-login {
-    width: 500px;
-    max-width: 100%;
-    background: #fff;
-    border-radius: 20px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    padding: 40px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  width: 600px;
+  height: 450px;
+  max-width: 100%;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px; /* Adicionado para aumentar o espaçamento entre os elementos */
 }
 
+
 .login-text {
-    font-size: 24px;
-    margin-bottom: 20px;
-    text-align: center;
+  font-size: 28px;
+  margin-bottom: 30px;
+  text-align: center;
+  padding-top: 25px;
 }
 
 .form-label {
-    font-size: 16px;
-    display: block;
-    margin-bottom: 5px;
+  font-size: 18px; /* Aumentado para melhorar a legibilidade em dispositivos maiores */
+  display: block;
+  margin-bottom: 10px;
 }
 
 .form-control {
-    width: 100%;
-    padding: 10px;
-    font-size: 16px;
-    border-radius: 3px;
-    border: 1px solid #ccc;
-    margin-bottom: 20px;
+  width: 100%;
+  padding: 10px;
+  font-size: 18px; /* Aumentado para melhorar a legibilidade em dispositivos maiores */
+  border-radius: 3px;
+  border: 1px solid #ccc;
+  margin-bottom: 20px;
+  background-color: #f9f9f9; /* Adicionado para melhorar a legibilidade */
 }
+
 
 .submit-button {
     width: 100%;
@@ -162,6 +168,37 @@ main {
   
     .submit-button {
       font-size: 14px;
+    }
+  }
+
+  @media screen and (max-width: 350px) {
+    .title {
+      font-size: 18px;
+    }
+  
+    .phrase {
+      font-size: 12px;
+    }
+  
+    .login-text {
+      font-size: 16px;
+    }
+  
+    .form-label {
+      font-size: 12px;
+    }
+  
+    .form-control {
+      font-size: 12px;
+    }
+  
+    .submit-button {
+      font-size: 12px;
+    }
+  
+    .container-login {
+      width: 90%;
+      padding: 20px;
     }
   }
   

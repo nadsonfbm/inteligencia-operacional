@@ -1,44 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<title>Inteligência Operacional - Login</title>
-		<meta charset="UTF-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link rel="stylesheet" type="text/css" href="style.css">
-		<link href='https://fonts.googleapis.com/css?family=Josefin Sans' rel='stylesheet'>
-		<script src="https://kit.fontawesome.com/90d23de173.js" crossorigin="anonymous"></script>
-		<script src="script.js" defer></script>
-		<script src="./include/include.js"></script>
-	</head>
-	<body>
-		<main>
-			<section class="container-title">
-				<h1 class="title">
-					<span class="text-primary">Inteligência</span><br>
-					<span class="text-secondary">Operacional</span>
-				</h1>
-				<p class="phrase">
-					Bem vindo(a) ao portal do setor de Inteligência Operacional.<br/>
-					Há {{yearsOld}} anos trazendo inovação no mercado de análise de dados e melhoria de processos.
-				</p>
+
+<head>
+	<title>Inteligência Operacional - Login</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link href='https://fonts.googleapis.com/css?family=Josefin Sans' rel='stylesheet'>
+	<script src="https://kit.fontawesome.com/90d23de173.js" crossorigin="anonymous"></script>
+	<script src="script.js" defer></script>
+	<script src="./include/include.js"></script>
+</head>
+
+<body>
+	<main>
+		<section class="container-title">
+			<h1 class="title">
+				<span class="text-primary">Inteligência</span><br>
+				<span class="text-secondary">Operacional</span>
+			</h1>
+			<p class="phrase">
+				Bem vindo(a) ao portal do setor de Inteligência Operacional.<br />
+				Há {{yearsOld}} anos trazendo inovação no mercado de análise de dados e melhoria de processos.
+			</p>
+		</section>
+		<section class="right-side">
+			<section class="container-login">
+				<form id="login-form" action="" method="post">
+					<p class="login-text">Login</p>
+					<div class="login-field">
+						<label class="form-label" for="username">Usuário</label>
+						<input type="text" name="username" id="username" class="form-control" required />
+					</div>
+					<div class="password-field">
+						<label class="form-label" for="password">Senha</label>
+						<input type="password" name="password" id="password" class="form-control" required />
+					</div>
+					<button type="submit" id="submit-button" class="submit-button">Entrar</button>
+				</form>
 			</section>
-			<section class="right-side">
-				<section class="container-login">
-					<form id="login-form" action="" method="post">
-						<p class="login-text">Login</p>
-						<div class="login-field">
-							<label class="form-label" for="username">Usuário</label>
-							<input type="text" name="username" id="username" class="form-control" required />
-						</div>
-						<div class="password-field">
-							<label class="form-label" for="password">Senha</label>
-							<input type="password" name="password" id="password" class="form-control" required />
-						</div>
-						<button type="submit" id="submit-button" class="submit-button"><a href="./control-panel/control-panel.html">Entrar</a></button>
-					</form>
-				</section>
-			</section>
-		</main>
-	</body>
+		</section>
+	</main>
+</body>
+
 </html>
