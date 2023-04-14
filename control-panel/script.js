@@ -32,3 +32,12 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+// Função para carregar a página de buffer
+
+function loadBuffer() {
+  fetch('./sidebar/pr_contract/Electrolux/inbounds/buffer.html')
+    .then(response => response.text())
+    .then(html => {
+      document.getElementById('main-content').innerHTML = html;
+    });
+}
