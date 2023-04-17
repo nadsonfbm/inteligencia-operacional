@@ -52,22 +52,22 @@ function loadPage(url) {
 
 function initPageLinks() {
   const links = [
-    {
-      id: 'dashboards-link',
-      url: './sidebar/pr_contract/Electrolux/general/dashboards.html'
-    },
-    {
-      id: 'buffer-link',
-      url: './sidebar/pr_contract/Electrolux/inbounds/buffer.html'
-    },
-    {
-      id: 'control-tower-link',
-      url: './sidebar/pr_contract/Electrolux/inbounds/control-tower.html'
-    },
-    {
-      id: 'historic-link',
-      url: './sidebar/pr_contract/Electrolux/inbounds/historic.html'
-    },
+    {id: 'dashboards-link', url: './sidebar/pr_contract/Electrolux/general/dashboards.html'},
+    {id: 'buffer-link', url: './sidebar/pr_contract/Electrolux/inbounds/supply/buffer/buffer.html'},
+    {id: 'control-tower-link', url: './sidebar/pr_contract/Electrolux/inbounds/supply/control_tower/control_tower.html'},
+    {id: 'history-link', url: './sidebar/pr_contract/Electrolux/inbounds/supply/history/history.html'},
+    {id: 'ci-check=notes-link', url: './sidebar/pr_contract/Electrolux/outbounds/crp/ci_check_notes/ci_check_notes.html'},
+    {id: 'costing-link', url: './sidebar/pr_contract/Electrolux/outbounds/crp/costing/costing.html'},
+    {id: 'deposit-breakdowns-link', url: './sidebar/pr_contract/Electrolux/outbounds/crp/deposit_breakdowns/deposit_breakdowns.html'},
+    {id: 'devolution-link', url: './sidebar/pr_contract/Electrolux/outbounds/crp/devolution/devolution.html'},
+    {id: 'materials-link', url: './sidebar/pr_contract/Electrolux/outbounds/crp/materials/materials.html'},
+    {id: 'overviews-link', url: './sidebar/pr_contract/Electrolux/outbounds/crp/overviews/overviews.html'},
+    {id: 'production-link', url: './sidebar/pr_contract/Electrolux/outbounds/crp/production/production.html'},
+    {id: 'scrapping-link', url: './sidebar/pr_contract/Electrolux/outbounds/crp/scrapping/scrapping.html'},
+    {id: 'small-check-notes-link', url: './sidebar/pr_contract/Electrolux/outbounds/crp/small_check_notes/small_check_notes.html'},
+    {id: 'config-link', url: './sidebar/tools/config/config.html'},
+    {id: 'profile-link', url: './sidebar/tools/profile/profile.html'},
+    {id: 'user-control-link', url: './sidebar/tools/user_control/user_control.html'},
   ];
 
   links.forEach(link => {

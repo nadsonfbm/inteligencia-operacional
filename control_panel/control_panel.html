@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>I. O. - Painel de Controle</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="./style.css">
+	<link href='https://fonts.googleapis.com/css?family=Josefin Sans' rel='stylesheet'>
+	<script src="https://kit.fontawesome.com/90d23de173.js" crossorigin="anonymous"></script>
+	<script src="./script.js" defer></script>
+</head>
+
+<body>
+	<header>
+		<div class="header-content">
+			<button id="toggle-sidebar">≡</button>
+			<h1 id="page-title">Inteligência Operacional</h1>
+		</div>
+		<h2 id="control-panel-title">Painel de Controle</h2>
+	</header>
+	<main>
+		<aside class="sidebar">
+			<nav>
+				<ul id="submenu-geral">
+					<div class="sidebar-container">
+						<li class="menu-regional">
+							<a href="#">Estados</a>
+							<ul id="submenu-states">
+								<!-- Estados -->
+								<!-- Mais Estados -->
+								<li class="state">
+									<a href="#">Paraná</a>
+									<ul id="submenu-pr-clients">
+										<li class="client">
+											<a href="#">Boticário</a>
+											<ul id="submenu-boticario">
+												<li class="contract">
+													<a href="#">Contrato 1</a>
+													<ul id="submenu-boticario-contrato-1">
+														<li class="application">
+															<a href="#">Application 1</a>
+														</li>
+														<li class="application">
+															<a href="#">Application 2</a>
+														</li>
+													</ul>
+												</li>
+												<li class="contract">
+													<a href="#">Contrato 2</a>
+													<ul id="submenu-boticario-contrato-2">
+														<li class="application">
+															<a href="#">Application 1</a>
+														</li>
+														<li class="application">
+															<a href="#">Application 2</a>
+														</li>
+													</ul>
+												</li>
+											</ul>
+										</li>
+										<li class="client">
+											<a href="#">Electrolux</a>
+											<ul id="submenu-electrolux">
+												<li class="general">
+													<a href="#">Geral</a>
+													<ul id="submenu-electrolux-general">
+														<li class="dashboards">
+															<a href="#" id="dashboards-link">Dashboards</a>
+														</li>
+													</ul>
+												</li>
+												<li class="inbounds">
+													<a href="#">Entradas</a>
+													<ul id="submenu-electrolux-inbounds">
+														<li class="supply">
+															<a href="#">Abastecimento</a>
+															<ul id="submenu-electrolux-inbounds-supply">
+																<li class="suplly-item">
+																	<a href="#" id="buffer-link">Buffer</a> </li>
+																<li class="suplly-item">
+																	<a href="#" id="control-tower-link">Torre de
+																		Controle</a>
+																</li>
+																<li class="suplly-item">
+																	<a href="#" id="history-link">Histórico</a>
+																</li>
+															</ul>
+														</li>
+													</ul>
+												</li>
+												<li class="outbounds">
+													<a href="#">Saídas</a>
+													<ul id="submenu-electrolux-outbounds">
+														<li class="crp">
+															<a href="">CRP</a>
+															<ul id="submenu-electrolux-outbounds-crp">
+																<li class="crp-item">
+																	<a href="#" id="deposit-breakdowns-link">Avarias de
+																		Depósito</a>
+																</li>
+																<li class="crp-item">
+																	<a href="#" id="costing-link">Custeio</a>
+																</li>
+																<li class="crp-item">
+																	<a href="#" id="ci-check-notes-link">Ci - Check
+																		Apontamentos</a>
+																</li>
+																<li class="crp-item">
+																	<a href="#" id="devolution-link">Devolução</a>
+																</li>
+																<li class="crp-item">
+																	<a href="#" id="materials-link">Materiais</a>
+																</li>
+																<li class="crp-item">
+																	<a href="#" id="production-link">Produção</a>
+																</li>
+																<li class="crp-item">
+																	<a href="#" id="small-check-notes-link">Small -
+																		Check
+																		Apontamentos</a>
+																</li>
+																<li class="crp-item">
+																	<a href="#" id="scrapping-link">Sucateamento </a>
+																</li>
+																<li class="crp-item">
+																	<a href="#" id="overview-link">Visão Geral</a>
+																</li>
+															</ul>
+														</li>
+													</ul>
+												</li>
+											</ul>
+										</li>
+										<li class="client">
+											<a href="#">Fiep</a>
+										</li>
+										<li class="client">
+											<a href="#">Indireto</a>
+										</li>
+										<li class="client">
+											<a href="#">Inspira Business</a>
+										</li>
+										<li class="client">
+											<a href="#">Renault</a>
+										</li>
+									</ul>
+								</li>
+								<!-- Mais Estados -->
+								<li class="state">
+									<a href="#">Santa Catarina</a>
+									<ul id="submenu-sc-clients">
+										<li class="client">
+											<a href="#">Britania Eletrônicos</a>
+										</li>
+										<li class="client">
+											<a href="#">CIA / Hering</a>
+										</li>
+										<li class="client">
+											<a href="#">Portonave</a>
+										</li>
+										<li class="client">
+											<a href="#">Rigesa</a>
+										</li>
+										<li class="client">
+											<a href="#">Siemens</a>
+										</li>
+										<li class="client">
+											<a href="#">Whirlpool</a>
+										</li>
+									</ul>
+								</li>
+								<!-- Mais Estados -->
+							</ul>
+						</li>
+						<li class="tools"><a href="#">Ferramentas</a>
+							<ul id="submenu-tools">
+								<li class="user-control">
+									<a href="#" id="user-control-link">Controle de Usuários</a>
+								</li>
+								<li class="profile">
+									<a href="#" id="profile-link">Perfil</a>
+								</li>
+								<li class="config">
+									<a href="#" id="config-link">Configurações</a>
+								</li>
+							</ul>
+						</li>
+					</div>
+					<div class="sidebar-logout">
+						<li>
+							<a href="../index.html">Sair do Painel</a>
+						</li>
+					</div>
+
+				</ul>
+			</nav>
+		</aside>
+		<div id="main-content"></div>
+	</main>
+	<footer>
+		<p>Grupo GPS &copy; 2023 - Desenvolvido por Nadson Mendes</p>
+	</footer>
+</body>
+
+</html>
