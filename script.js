@@ -1,5 +1,3 @@
-/* Validação de login */
-
 document.addEventListener("DOMContentLoaded", function () {
     const loginForm = document.getElementById("login-form");
     const usernameInput = document.getElementById("username");
@@ -13,6 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // Validação de exemplo (substitua pela validação desejada)
         if (username === "admin" && password === "12345") {
+            localStorage.setItem("isLoggedIn", true);
             window.location.href = "./control-panel/control-panel.html";
         } else {
             alert("Usuário ou senha incorretos!");

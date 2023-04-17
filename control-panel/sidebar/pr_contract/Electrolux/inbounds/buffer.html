@@ -1,43 +1,50 @@
-<!-- buffer.html -->
+<!-- ./sidebar/pr_contract/Electrolux/inbounds/buffer.html -->
 
-<!-- Compare this snippet from control-panel\sidebar\pr_contract\Electrolux\inbounds\buffer.html: -->
-
-<div class="table-container">
-    <div class="filters">
-        <input type="text" placeholder="Pesquisar..." />
-        <select>
-            <option value="asc">Crescente</option>
-            <option value="desc">Decrescente</option>
-        </select>
+<div class="buffer-page">
+    <div class="top-bar">
+        <h2>Solicitações de Materiais</h2>
+        <div class="search-bar">
+            <input type="text" placeholder="Pesquisar..." />
+            <button id="search-btn">Pesquisar</button>
+            <button id="clear-btn">Limpar</button>
+            <select>
+                <option value="10">10 itens</option>
+                <option value="25">25 itens</option>
+                <option value="50">50 itens</option>
+                <option value="100">100 itens</option>
+            </select>
+        </div>
     </div>
-    <form method="POST">
-        <table>
-            <thead>
-                <tr>
-                    <th scope="col">FALTA</th>
-                    <th scope="col">DATA</th>
-                    <th scope="col">ITEM</th>
-                    <th scope="col">RUA</th>
-                    <th scope="col">URGÊNCIA</th>
-                    <th scope="col">BASE</th>
-                    <th scope="col">ENTREGUE</th>
-                </tr>
-            </thead>
-            <tbody>
-                <!-- Substitua o loop for abaixo por um loop JavaScript que itere sobre os dados do seu banco de dados -->
-                <tr>
-                    <td><button type="submit" name="reject" value="BUFFER_ID_TAREFA"
-                            class="reject-button">Rejeitar</button></td>
-                    <td>INICIO</td>
-                    <td>ITEM</td>
-                    <td>RUA</td>
-                    <td>URGENCIA</td>
-                    <td>BASE</td>
-                    <td><button type="submit" name="confirm" value="BUFFER_ID_TAREFA"
-                            class="submit-button">Confirmar</button></td>
-                </tr>
-                <!-- Fim do loop -->
-            </tbody>
-        </table>
-    </form>
+    <div class="table-container">
+        <form method="POST">
+            <table>
+                <thead>
+                    <tr>
+                        <th scope="col" class="sortable">Falta</th>
+                        <th scope="col" class="sortable">Data</th>
+                        <th scope="col" class="sortable">Item</th>
+                        <th scope="col" class="sortable">Rua</th>
+                        <th scope="col" class="sortable">Urgência</th>
+                        <th scope="col" class="sortable">Base</th>
+                        <th scope="col">Entregue</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Início do loop -->
+                    <tr>
+                        <td><button type="submit" name="reject" value="BUFFER_ID_TAREFA"
+                                class="reject-button">Rejeitar</button></td>
+                        <td>Início</td>
+                        <td>Item</td>
+                        <td>Rua</td>
+                        <td>Urgência</td>
+                        <td>Base</td>
+                        <td><button type="submit" name="confirm" value="BUFFER_ID_TAREFA"
+                                class="submit-button">Confirmar</button></td>
+                    </tr>
+                    <!-- Fim do loop -->
+                </tbody>
+            </table>
+        </form>
+    </div>
 </div>

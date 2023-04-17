@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<title>I. O. - Painel de Controle</title>
 	<meta charset="UTF-8">
@@ -10,32 +11,33 @@
 	<script src="https://kit.fontawesome.com/90d23de173.js" crossorigin="anonymous"></script>
 	<script src="./script.js" defer></script>
 </head>
+
 <body>
 	<header>
 		<div class="header-content">
 			<button id="toggle-sidebar">≡</button>
 			<h1 id="page-title">Inteligência Operacional</h1>
 		</div>
-		<div id="control-panel">Painel de Controle</div>
+		<h2 id="control-panel-title">Painel de Controle</h2>
 	</header>
 	<main>
 		<aside class="sidebar">
 			<nav>
-				<ul>
+				<ul id="submenu-geral">
 					<li class="menu-regional">
 						<a href="#">Estados</a>
-						<ul>
+						<ul id="submenu-states">
 							<!-- Estados -->
 							<!-- Mais Estados -->
 							<li class="state">
 								<a href="#">Paraná</a>
-								<ul>
+								<ul id="submenu-pr-clients">
 									<li class="client">
 										<a href="#">Boticário</a>
-										<ul>
+										<ul id="submenu-boticario">
 											<li class="contract">
 												<a href="#">Contrato 1</a>
-												<ul>
+												<ul id="submenu-boticario-contrato-1">
 													<li class="application">
 														<a href="#">Application 1</a>
 													</li>
@@ -46,7 +48,7 @@
 											</li>
 											<li class="contract">
 												<a href="#">Contrato 2</a>
-												<ul>
+												<ul id="submenu-boticario-contrato-2">
 													<li class="application">
 														<a href="#">Application 1</a>
 													</li>
@@ -59,29 +61,28 @@
 									</li>
 									<li class="client">
 										<a href="#">Electrolux</a>
-										<ul>
+										<ul id="submenu-electrolux">
 											<li class="general">
 												<a href="#">Geral</a>
-												<ul>
+												<ul id="submenu-electrolux-general">
 													<li class="dashboards">
-														<a href="#">Dashboards</a>
+														<a href="#" id="dashboards-link">Dashboards</a>
 													</li>
 												</ul>
 											</li>
 											<li class="inbounds">
 												<a href="#">Entradas</a>
-												<ul>
+												<ul id="submenu-electrolux-inbounds">
 													<li class="supply">
 														<a href="#">Abastecimento</a>
-														<ul>
+														<ul id="submenu-electrolux-inbounds-supply">
 															<li class="suplly-item">
-																<a href="#" onclick="loadBuffer()">Buffer</a>
+																<a href="#" id="buffer-link">Buffer</a> </li>
+															<li class="suplly-item">
+																<a href="#" id="control-tower-link">Torre de Controle</a>
 															</li>
 															<li class="suplly-item">
-																<a href="#"> onclick="loadControlTower()">Torre de Controle</a>
-															</li>
-															<li class="suplly-item">
-																<a href="#"> onclick="loadHistoric()">Histórico</a>
+																<a href="#" id="historic-link">Histórico</a>
 															</li>
 														</ul>
 													</li>
@@ -89,10 +90,10 @@
 											</li>
 											<li class="outbounds">
 												<a href="#">Saídas</a>
-												<ul>
+												<ul id="submenu-electrolux-outbounds">
 													<li class="crp">
 														<a href="">CRP</a>
-														<ul>
+														<ul id="submenu-electrolux-outbounds-crp">
 															<li class="crp-item">
 																<a href="">Produção</a>
 															</li>
@@ -143,7 +144,7 @@
 							<!-- Mais Estados -->
 							<li class="state">
 								<a href="#">Santa Catarina</a>
-								<ul>
+								<ul id="submenu-sc-clients">
 									<li class="client">
 										<a href="#">Britania Eletrônicos</a>
 									</li>
@@ -168,23 +169,19 @@
 						</ul>
 					</li>
 					<li class="tools"><a href="#">Ferramentas</a>
-						<ul>
-							<li class="user">
-								<a href="#">Usuário</a>
-								<ul>
-									<li class="control">
-										<a href="#">Controle</a>
-										<ul>
-											<li class="control-access">
-												<a href="#">Controle de Acesso</a>
-											</li>
-										</ul>
-									</li>
-								</ul>
+						<ul id="submenu-tools">
+							<li class="user-control">
+								<a href="#" id="user-control-link">Controle de Usuários</a>
+							</li>
+							<li class="profile">
+								<a href="#" id="profile-link">Perfil</a>
+							</li>
+							<li class="config">
+								<a href="#" id="config-link">Configurações</a>
 							</li>
 						</ul>
 					</li>
-					<li class="logout">
+					<li class="sidebar-logout">
 						<a href="../index.html">Sair do Painel</a>
 					</li>
 				</ul>
@@ -196,4 +193,5 @@
 		<p>Grupo GPS &copy; 2023 - Desenvolvido por Nadson Mendes</p>
 	</footer>
 </body>
+
 </html>
