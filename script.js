@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
         // Validação de exemplo (substitua pela validação desejada)
         if (username === "admin" && password === "12345") {
             localStorage.setItem("isLoggedIn", true);
-            window.location.href = "./control-panel/control-panel.html";
+            window.location.href = "./control_panel/control_panel.html";
         } else {
             alert("Usuário ou senha incorretos!");
         }

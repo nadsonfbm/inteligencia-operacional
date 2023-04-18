@@ -1,8 +1,7 @@
 :root {
-  --primary-color: #2c3e50;
-  --secondary-color: #34495e;
-  --background-color: #a3a3a3;
-  --text-color: #fff;
+  --primary-background-color: #2e6da0;
+  --body-background-color: #a3a3a3;
+  --text-color: #000000;
 }
 
 * {
@@ -17,17 +16,17 @@ body {
   flex-direction: column;
   min-height: 100vh;
   font-family: 'Josefin Sans', sans-serif;
-  background-color: var(--primary-color);
+  background-color: var(--body-background-color);
 }
 
-/* Cabeçalho - Header */
+/* Header Styles */
 
 header {
   display: flex;
   justify-content: flex-start;
   align-items: center;
   padding: 1rem;
-  background-color: var(--secondary-color);
+  background-color: var(--primary-background-color);
   color: var(--text-color);
   border-bottom: 2px solid #000000;
 }
@@ -41,11 +40,12 @@ header {
 #toggle-sidebar {
   background-color: transparent;
   border: none;
-  color: #fff;
+  color: var(--text-color);
   font-size: 1.5rem;
   cursor: pointer;
   padding: 5px;
   margin-left: 5px;
+  margin-right: 8px;
 }
 
 #toggle-sidebar:focus {
@@ -53,22 +53,28 @@ header {
 }
 
 #toggle-sidebar:hover {
-  background-color: #223446;
-  border-radius: 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
 }
 
 .hidden {
   display: none;
 }
 
-#page-title {
+.page-title {
   margin-left: 5px;
   font-size: 1.5rem;
 }
 
-#control-panel {
-  font-size: 1.25rem;
+.control-panel-title {
+  font-size: 1.5rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
 }
+
+/* End of Header Styles */
+
+/* Main Content Styles */
 
 main {
   display: flex;
@@ -79,26 +85,41 @@ main {
   flex-grow: 1;
   padding: 1rem;
   overflow: auto;
-  margin-left: 20px;
+  margin: 10px;
   transition: margin-left 0.3s ease;
 }
 
 #main-content.sidebar-hidden {
-  margin-left: 20px;
+  margin-left: 10px;
   transition: margin-left 0.3s ease;
 }
 
+/* End of Main Content Styles */
+
+/* Sidebar Styles */
+
 .sidebar {
-  min-width: 180px;
-  max-width: 400px;
-  background-color: var(--secondary-color);
+  min-width: 150px;
+  max-width: 450px;
+  background-color: var(--primary-background-color);
   border-right: 2px solid #000000;
-  overflow: auto;
-  padding-top: 1rem;
-  padding-right: 0.5rem;
+  overflow-x: hidden;
+  padding-top: 0.5rem;
+  padding-bottom: 5rem;
   position: sticky;
   white-space: nowrap;
   transition: all 0.3s ease;
+}
+
+.sidebar-container a {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+
+.sidebar-container a::before {
+  content: "▶";
+  font-size: 0.8rem;
+  padding-right: 0.3rem;
 }
 
 .sidebar ul {
@@ -107,20 +128,21 @@ main {
 
 .sidebar ul ul {
   display: none;
-  padding-left: 15px;
+  padding-left: 1.1rem;
   position: relative;
 }
 
 .sidebar a {
   display: inline-block;
-  padding: 5px 10px;
-  color: #fff;
+  padding: 0.4rem 0.2rem;
+  color: var(--text-color);
+  font-weight: bold;
   text-decoration: none;
 }
 
 .sidebar a:hover {
-  background-color: #223446;
-  border-radius: 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
 }
 
 .sidebar.hidden {
@@ -131,7 +153,6 @@ main {
 nav ul {
   white-space: nowrap;
   list-style-type: none;
-  padding-left: 0.5rem;
 }
 
 nav a {
@@ -142,11 +163,19 @@ nav a {
 }
 
 .sidebar-logout {
+  font-size: large;
+  font-weight: bolder;
+  position: absolute;
   bottom: 0;
+  padding-top: 1rem;
   padding-bottom: 1rem;
+  text-align: center;
   width: 100%;
-  background-color: var(--secondary-color);
+  background-color: #125185;
+  border-top: 2px solid #000;
 }
+
+/* End of Sidebar Styles */
 
 /* buffer styles */
 
@@ -160,7 +189,7 @@ footer {
   padding: 0.5rem;
   font-size: small;
   border-top: 2px solid #000000;
-  background-color: var(--secondary-color);
+  background-color: var(--primary-background-color);
   color: #fff;
   text-align: center;
 }
