@@ -6,7 +6,10 @@ header {
     background-color: var(--primary-background-color);
     color: var(--text-color);
     border-bottom: 2px solid #000000;
+    flex-wrap: nowrap;
+    flex-direction: row;
 }
+
 
 .header-content {
     display: flex;
