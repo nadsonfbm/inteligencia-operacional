@@ -1,0 +1,63 @@
+:root {
+  --primary-background-color: #2e6da0;
+  --body-background-color: #a3a3a3;
+  --text-color: #000000;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: 'Josefin Sans', sans-serif;
+  background-color: var(--body-background-color);
+}
+
+/* Header Styles */
+
+
+
+/* End of Header Styles */
+
+/* Main Content Styles */
+
+main {
+  display: flex;
+  flex-grow: 1;
+}
+
+#main-content {
+  flex-grow: 1;
+  padding: 1rem;
+  overflow: auto;
+  margin: 10px;
+  transition: margin-left 0.3s ease;
+}
+
+#main-content.sidebar-hidden {
+  margin-left: 10px;
+  transition: margin-left 0.3s ease;
+}
+
+/* End of Main Content Styles */
+
+/* Sidebar Styles */
+
+
+
+/* End of Sidebar Styles */
+
+/* buffer styles */
+
+/* end of buffer styles */
+
+/* control tower styles */
+
+/* end of control tower styles */
+
