@@ -1,17 +1,24 @@
-async function loadExternalContent(id, url) {
-  try {
-    const response = await fetch(url);
-    if (!response.ok) {
-      throw new Error(`Erro ao carregar o arquivo HTML: ${url}`);
-    }
-    const conteudo = await response.text();
-    document.getElementById(id).innerHTML = conteudo;
-  } catch (error) {
-    console.error('Erro:', error);
-  }
+document.addEventListener("DOMContentLoaded", () => {
+  loadHTMLComponents();
+
+  // Outras funções que você deseja executar quando o DOM estiver totalmente carregado
+});
+
+function loadHTMLComponents() {
+  fetchComponent("../control_panel/header/header.html", "header");
+  fetchComponent("../control_panel/sidebar/sidebar.html", "sidebar");
+  fetchComponent("../control_panel/footer/footer.html", "footer");
 }
 
-// Chame a função para cada componente que deseja carregar
-loadExternalContent('header', './header/header.html');
-loadExternalContent('sidebar', './sidebar/sidebar.html');
-loadExternalContent('footer', './footer/footer.html');
+function fetchComponent(path, elementId) {
+  fetch(path)
+    .then((response) => response.text())
+    .then((html) => {
+      document.getElementById(elementId).innerHTML = html;
+    })
+    .catch((error) => {
+      console.warn(`Erro ao carregar o componente ${elementId}:`, error);
+    });
+}
+
+

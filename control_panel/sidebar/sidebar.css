@@ -11,6 +11,23 @@
     transition: all 0.3s ease;
 }
 
+.hidden-menu {
+    display: none;
+}
+
+.sidebar a {
+    display: inline-block;
+    padding: 0.4rem 0.2rem;
+    color: var(--text-color);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.sidebar a:hover {
+    background-color: #ffffff;
+    border-radius: 10px;
+}
+
 .sidebar-container a {
     margin-left: 0.5rem;
     margin-right: 0.5rem;
@@ -27,22 +44,8 @@
 }
 
 .sidebar ul ul {
-    display: none;
     padding-left: 1.1rem;
     position: relative;
-}
-
-.sidebar a {
-    display: inline-block;
-    padding: 0.4rem 0.2rem;
-    color: var(--text-color);
-    font-weight: bold;
-    text-decoration: none;
-}
-
-.sidebar a:hover {
-    background-color: #ffffff;
-    border-radius: 10px;
 }
 
 .sidebar.hidden {

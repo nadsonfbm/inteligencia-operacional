@@ -19,14 +19,6 @@ body {
   background-color: var(--body-background-color);
 }
 
-/* Header Styles */
-
-
-
-/* End of Header Styles */
-
-/* Main Content Styles */
-
 main {
   display: flex;
   flex-grow: 1;
@@ -44,20 +36,3 @@ main {
   margin-left: 10px;
   transition: margin-left 0.3s ease;
 }
-
-/* End of Main Content Styles */
-
-/* Sidebar Styles */
-
-
-
-/* End of Sidebar Styles */
-
-/* buffer styles */
-
-/* end of buffer styles */
-
-/* control tower styles */
-
-/* end of control tower styles */
-
