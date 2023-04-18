@@ -8,6 +8,8 @@ function loadHTMLComponents() {
   fetchComponent("../control_panel/header/header.html", "header");
   fetchComponent("../control_panel/sidebar/sidebar.html", "sidebar");
   fetchComponent("../control_panel/footer/footer.html", "footer");
+    // Adicione esta linha após carregar os componentes
+    initializeMenuItems();
 }
 
 function fetchComponent(path, elementId) {

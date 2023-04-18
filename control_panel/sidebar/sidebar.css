@@ -7,12 +7,11 @@
     padding-top: 0.5rem;
     padding-bottom: 5rem;
     position: sticky;
+    top: 0;
+    bottom: 0;
+    height: 100%;
     white-space: nowrap;
     transition: all 0.3s ease;
-}
-
-.sidebar-container {
-    min-height: calc(98vh - 10rem);
 }
 
 .sidebar-container a {
