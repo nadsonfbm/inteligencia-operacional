@@ -90,6 +90,11 @@ function initializeSidebar() {
       }
     });
   });
+
+  // Para mostrar/ocultar a sidebar quando o usuário clicar no botão de toggle
+  toggleSidebarBtn.addEventListener('click', () => {
+    toggleSidebarBtn.classList.toggle('active');
+  });
 }
 
 function logout() {

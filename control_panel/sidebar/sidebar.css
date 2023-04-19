@@ -13,6 +13,8 @@
     white-space: nowrap;
     transition: all 0.3s ease;
     border-right: 2px solid #000000;
+    border-left: 2px solid #000000;
+    border-radius: 2px;
 }
 
 .sidebar-container a {
@@ -107,23 +109,15 @@ nav a {
 
 @keyframes fadeIn {
     0% {
-        opacity: 0;
+      opacity: 0;
+      transform: translateY(20px);
     }
-
+  
     100% {
-        opacity: 1;
+      opacity: 1;
+      transform: translateY(0);
     }
-}
-
-@keyframes fadeOut {
-    0% {
-        opacity: 1;
-    }
-
-    100% {
-        opacity: 0;
-    }
-}
+  }
 
 .sidebar {
     animation: fadeIn 1s;

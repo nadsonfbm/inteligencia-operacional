@@ -2,8 +2,24 @@ footer {
     padding: 0.5rem;
     font-size: medium;
     font-weight: bold;
-    border-top: 2px solid #000000;
+    border: 2px solid #000000;
     background-color: var(--primary-background-color);
     color: var(--font-color);
     text-align: center;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+footer {
+    animation: fadeIn 1s;
 }
