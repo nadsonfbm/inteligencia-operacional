@@ -91,10 +91,11 @@ function initializeSidebar() {
     });
   });
 
-  // Para mostrar/ocultar a sidebar quando o usuário clicar no botão de toggle
+  // Efeito giratório no botão de ocultar/mostrar a sidebar
   toggleSidebarBtn.addEventListener('click', () => {
     toggleSidebarBtn.classList.toggle('active');
   });
+
 }
 
 function logout() {
@@ -103,3 +104,32 @@ function logout() {
   // Redireciona o usuário para a página index.html
   window.location.href = '../index.html';
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+  const sidebarLinks = document.querySelectorAll(".sidebar-link");
+  const main = document.getElementById("main");
+
+  sidebarLinks.forEach((link) => {
+    link.addEventListener("click", function (event) {
+      event.preventDefault();
+      const pagePath = link.getAttribute("data-page");
+      loadPage(pagePath);
+    });
+  });
+
+  function loadPage(pagePath) {
+    fetch(pagePath)
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error(`Erro ao carregar a página ${pagePath}`);
+        }
+        return response.text();
+      })
+      .then((html) => {
+        main.innerHTML = html;
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  }
+});

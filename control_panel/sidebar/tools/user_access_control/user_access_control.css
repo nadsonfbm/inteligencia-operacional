@@ -1,0 +1,42 @@
+#user-access-control {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  #user-access-control .row {
+    margin-bottom: 1rem;
+  }
+  
+  #user-access-control table {
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+  }
+  
+  #user-access-control table th,
+  #user-access-control table td {
+    text-align: left;
+    vertical-align: middle;
+    padding: 0.5rem;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  #user-access-control table th:first-child,
+  #user-access-control table td:first-child {
+    width: 30px;
+    text-align: center;
+  }
+  
+  #user-access-control table th:last-child,
+  #user-access-control table td:last-child {
+    width: 120px;
+  }
+  
+  #user-access-control .btn {
+    width: 100%;
+  }
+  
+  .pagination {
+    justify-content: center;
+  }
+  

@@ -1,0 +1,59 @@
+  <div id="user-access-control" class="container">
+      <h2 class="text-center">Controle de Acesso de Usuários</h2>
+      <div class="row">
+          <div class="col-4">
+              <input type="search" class="form-control" placeholder="Pesquisar">
+          </div>
+          <div class="col-4">
+              <select class="form-select" aria-label="Selecionar ação">
+                  <option value="enable">Ativar Usuário(s)</option>
+                  <option value="disable">Inativar Usuário(s)</option>
+                  <option value="delete">Deletar Usuário(s)</option>
+              </select>
+          </div>
+          <div class="col-1">
+              <button class="btn btn-primary">Confirmar</button>
+          </div>
+          <div class="col-1">
+              <button class="btn btn-primary">Novo Usuário</button>
+          </div>
+          <div class="col-2">
+              <select class="form-select" aria-label="Selecionar quantidade de itens">
+                  <option value="10">10 itens</option>
+                  <option value="25">25 itens</option>
+                  <option value="50">50 itens</option>
+                  <option value="100">100 itens</option>
+              </select>
+          </div>
+      </div>
+      <table class="table">
+          <thead>
+              <tr>
+                  <th scope="col"><input type="checkbox"></th>
+                  <th scope="col">ID</th>
+                  <th scope="col">Usuário</th>
+                  <th scope="col">Nome</th>
+                  <th scope="col">Sobrenome</th>
+                  <th scope="col">E-mail</th>
+                  <th scope="col">Último Login</th>
+                  <th scope="col">Ativo</th>
+                  <th scope="col">Ações</th>
+              </tr>
+          </thead>
+          <tbody>
+              <!-- Insira as linhas da tabela aqui conforme necessário -->
+          </tbody>
+      </table>
+      <nav aria-label="Navegação de página">
+          <ul class="pagination">
+              <li class="page-item"><a class="page-link" href="#">Anterior</a></li>
+              <li class="page-item"><a class="page-link" href="#">1</a></li>
+              <li class="page-item"><a class="page-link" href="#">2</a></li>
+              <li class="page-item"><a class="page-link" href="#">3</a></li>
+              <li class="page-item"><a class="page-link" href="#">Próxima</a></li>
+          </ul>
+      </nav>
+      <div class="text-end">
+          <span>Mostrando 1-10 de 25 itens</span>
+      </div>
+  </div>
