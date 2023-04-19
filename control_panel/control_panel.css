@@ -36,3 +36,21 @@ main {
   margin-left: 10px;
   transition: margin-left 0.3s ease;
 }
+
+@media (max-width: 1024px) {
+  :root {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    font-size: 10px;
+  }
+}
