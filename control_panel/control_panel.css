@@ -1,6 +1,6 @@
 :root {
   --primary-background-color: #2e6da0;
-  --body-background-color: #a3a3a3;
+  --body-background-color: #d8d8d8;
   --text-color: #000000;
 }
 
@@ -28,14 +28,25 @@ main {
 #main {
   position: relative;
   display: flex;
-  justify-content: center;
-  align-items: center;
   width: 100%;
   min-height: 100%;
   padding: 1rem;
   overflow: auto;
-  margin: 10px;
+  margin: 1rem;  
   transition: margin-left 0.3s ease;
+}
+
+
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 .subpage-container {
