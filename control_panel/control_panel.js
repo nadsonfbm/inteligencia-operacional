@@ -28,45 +28,28 @@ function loadSubpage(url) {
   fetch(url)
     .then((response) => response.text())
     .then((html) => {
-      document.querySelector("#main").innerHTML = html;
-      // Armazena a URL e o conteúdo da subpágina no localStorage
-      localStorage.setItem("subpageURL", url);
-      localStorage.setItem("subpageContent", html);
+      const mainElement = document.querySelector("#main");
+      mainElement.innerHTML = html;
+      
+      // Exibe a div #main e oculta o título "Grupo GPS"
+      mainElement.style.display = "flex";
+      document.getElementById("company-title").style.display = "none";
     })
     .catch((error) => {
       console.warn(error);
     });
 }
 
-// Função para carregar o conteúdo de uma subpágina salva no localStorage
 
-function loadSavedState() {
-  const savedURL = localStorage.getItem("subpageURL");
-  const savedContent = localStorage.getItem("subpageContent");
-
-  if (savedURL && savedContent) {
-    // Atualize a div "main" com o conteúdo salvo
-    document.querySelector("#main").innerHTML = savedContent;
-    
-    // Adicione a classe "active" ao link correspondente na barra lateral
-    const sidebarLinks = document.querySelectorAll(".sidebar a");
-    sidebarLinks.forEach((link) => {
-      if (link.dataset.url === savedURL) {
-        link.classList.add("active");
-      } else {
-        link.classList.remove("active");
-      }
-    });
-  }
+// Função para fechar o conteúdo que está no "main" quando o usuário clicar no link "Painel de Controle"
+function closeMainContent() {
+  const mainElement = document.getElementById("main");
+  mainElement.innerHTML = "";
+  
+  // Oculta a div #main e exibe o título "Grupo GPS"
+  mainElement.style.display = "none";
+  document.getElementById("company-title").style.display = "flex";
 }
-
-// Carrega o estado salvo quando o DOM estiver pronto
-document.addEventListener("DOMContentLoaded", () => {
-  loadSavedState();
-});
-
-
-
 
 // Função para resetar a sidebar quando o usuário clicar no link "Painel de Controle"
 function resetSidebar() {
@@ -74,11 +57,6 @@ function resetSidebar() {
   submenus.forEach((submenu) => {
     submenu.classList.add('hidden');
   });
-}
-
-// Função para fechar o conteúdo que está no "main" quando o usuário clicar no link "Painel de Controle"
-function closeMainContent() {
-  document.getElementById('main').innerHTML = '';
 }
 
 // Função para inicializar a sidebar quando ela for carregada
