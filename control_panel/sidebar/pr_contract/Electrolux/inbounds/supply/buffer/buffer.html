@@ -1,11 +1,25 @@
-<div class="buffer-page">
-    <div class="top-bar">
-        <h2>Solicitações de Materiais</h2>
-        <div class="search-bar">
-            <input type="text" placeholder="Pesquisar..." />
-            <button id="search-btn">Pesquisar</button>
-            <button id="clear-btn">Limpar</button>
-            <select>
+<div id="user-access-control" class="container">
+    <h2 class="title">Solicitações de Materiais na Linha</h2>
+    <div class="filters-row">
+        <div class="search-form">
+            <input type="search" class="form-control" placeholder="Pesquisar">
+            <button class="search-button">Pesquisar</button>
+        </div>
+        <div class="actions">
+            <select class="form-select" aria-label="Selecionar Rua">
+                <option value="street">Rua</option>
+            </select>
+            <select class="form-select" aria-label="Selecionar Item=">
+                <option value="item">Item</option>
+        </div>
+        <div class="filter">
+            <button class="confirm-button">Filtrar</button>
+        </div>
+        <div class="clean">
+            <button class="clean-button">Limpar</button>
+        </div>
+        <div class="itens-quantity">
+            <select class="itens-select" aria-label="Selecionar Quantidade de Itens">
                 <option value="10">10 itens</option>
                 <option value="25">25 itens</option>
                 <option value="50">50 itens</option>
@@ -13,36 +27,44 @@
             </select>
         </div>
     </div>
-    <div class="table-container">
-        <form method="POST">
-            <table>
-                <thead>
-                    <tr>
-                        <th scope="col" class="sortable">Falta</th>
-                        <th scope="col" class="sortable">Data</th>
-                        <th scope="col" class="sortable">Item</th>
-                        <th scope="col" class="sortable">Rua</th>
-                        <th scope="col" class="sortable">Urgência</th>
-                        <th scope="col" class="sortable">Base</th>
-                        <th scope="col">Entregue</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <!-- Início do loop -->
-                    <tr>
-                        <td><button type="submit" name="reject" value="BUFFER_ID_TAREFA"
-                                class="reject-button">Rejeitar</button></td>
-                        <td>Início</td>
-                        <td>Item</td>
-                        <td>Rua</td>
-                        <td>Urgência</td>
-                        <td>Base</td>
-                        <td><button type="submit" name="confirm" value="BUFFER_ID_TAREFA"
-                                class="submit-button">Confirmar</button></td>
-                    </tr>
-                    <!-- Fim do loop -->
-                </tbody>
-            </table>
-        </form>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="lack">Falta</th>
+                <th scope="date">data/th>
+                <th scope="item">Item</th>
+                <th scope="street">Rua</th>
+                <th scope="urgency">Urgência</th>
+                <th scope="base">Base</th>
+                <th scope="delivered">Entregue</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Início do loop -->
+            <tr>
+                <td><button type="submit" name="reject" value="BUFFER_ID_TAREFA"
+                        class="reject-button">Rejeitar</button></td>
+                <td>Início</td>
+                <td>Item</td>
+                <td>Rua</td>
+                <td>Urgência</td>
+                <td>Base</td>
+                <td><button type="submit" name="confirm" value="BUFFER_ID_TAREFA"
+                        class="submit-button">Confirmar</button></td>
+            </tr>
+            <!-- Fim do loop -->
+        </tbody>
+    </table>
+    <nav aria-label="Navegação de Página">
+        <ul class="pagination">
+            <li class="page-item"><a class="page-link" href="#">Anterior</a></li>
+            <li class="page-item"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item"><a class="page-link" href="#">Próxima</a></li>
+        </ul>
+    </nav>
+    <div class="text-end">
+        <span>Mostrando 1-10 de 25 itens</span>
     </div>
 </div>

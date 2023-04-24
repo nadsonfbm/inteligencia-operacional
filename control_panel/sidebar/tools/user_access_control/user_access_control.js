@@ -1,14 +1,18 @@
 document.addEventListener("DOMContentLoaded", function () {
-    // ...
+    // Obter elementos necessários
+    const newUserBtn = document.querySelector(".new-user-button");
+    const modal = document.querySelector("#new-user-modal");
+    const closeBtn = document.querySelector(".close");
+    const newUserForm = document.querySelector("#new-user-form");
 
     // Função para adicionar um usuário à tabela HTML
     function addUserToTable(id, username) {
         const table = document.querySelector(".table tbody");
         const newRow = table.insertRow();
-        
+
         const idCell = newRow.insertCell(0);
         const usernameCell = newRow.insertCell(1);
-        
+
         idCell.textContent = id;
         usernameCell.textContent = username;
     }
@@ -16,7 +20,10 @@ document.addEventListener("DOMContentLoaded", function () {
     // Array para armazenar os usuários
     const users = [];
 
-    // Adicionar evento de submit para o formulário de novo usuário
+    newUserBtn.addEventListener("click", openModal);
+
+    closeBtn.addEventListener("click", closeModal);
+
     newUserForm.addEventListener("submit", function (event) {
         event.preventDefault();
 
@@ -31,25 +38,26 @@ document.addEventListener("DOMContentLoaded", function () {
         addUserToTable(userId, newUsername);
 
         // Fechar modal
-        modal.style.display = "none";
+        closeModal();
     });
 
-    // ...
-
-    loginForm.addEventListener("submit", function (event) {
-        event.preventDefault();
-
-        const username = usernameInput.value;
-        const password = passwordInput.value;
-
-        // Validação usando o array de usuários
-        const user = users.find(user => user.username === username && user.password === password);
-
-        if (user) {
-            localStorage.setItem("isLoggedIn", true);
-            window.location.href = "./control_panel/control_panel.html";
-        } else {
-            alert("Usuário ou senha incorretos!");
+    window.addEventListener("click", function (event) {
+        if (event.target === modal) {
+            closeModal();
         }
     });
 });
+
+function openModal() {
+    const modal = document.querySelector("#new-user-modal");
+    modal.style.display = "block";
+}
+
+function closeModal() {
+    const modal = document.querySelector("#new-user-modal");
+    modal.style.display = "none";
+}
+
+function createUser() {
+    // Aqui você pode enviar os dados do formulário para o servidor e criar o novo usuário
+}
