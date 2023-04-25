@@ -1,0 +1,17 @@
+/* Estilos para a grid de dashboards */
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    padding: 20px;
+}
+
+/* Estilos para os cards de dashboard */
+.card {
+    background-color: #fff;
+    border: 2px solid #000;
+    padding: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+}

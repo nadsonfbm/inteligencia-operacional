@@ -1,0 +1,32 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+  }
+  
+  .card-body {
+    padding: 1rem;
+  }
+  
+  .card-title-1,
+  .card-title-2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  
+  .card-subtitle-1,
+  .card-subtitle-2 {
+    font-size: 1.2rem;
+    font-weight: normal;
+    color: #777;
+  }
+  
+  .dashboards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }

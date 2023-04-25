@@ -18,13 +18,18 @@ loadHTML('./sidebar/sidebar.html', 'sidebar')
   .then(() => {
     // Inicializa a sidebar após carregar o conteúdo
     initializeSidebar();
+    restoreSidebarState(); // Restaurar o estado da sidebar
   });
+
 
 // Carrega o conteúdo do footer.html e insere na seção com o ID "footer"
 loadHTML('./footer/footer.html', 'footer');
 
 // Função para carregar o conteúdo de uma subpágina	na seção com o ID "main" do control_panel.html
 function loadSubpage(url) {
+  // Armazenar a URL da subpágina no localStorage
+  localStorage.setItem('currentSubpageUrl', url);
+
   fetch(url)
     .then((response) => response.text())
     .then((html) => {
@@ -40,16 +45,43 @@ function loadSubpage(url) {
     });
 }
 
+// Função para salvar para o localStorage o estado da sidebar (se os submenus estão ocultos ou não)
+function saveSidebarState() {
+  const submenus = document.querySelectorAll('.sidebar-container ul ul');
+  const sidebarState = Array.from(submenus).map(submenu => {
+    return !submenu.classList.contains('hidden');
+  });
+  localStorage.setItem('sidebarState', JSON.stringify(sidebarState));
+}
+
+// Função para restaurar o estado da sidebar (se os submenus estão ocultos ou não) a partir do localStorage
+function restoreSidebarState() {
+  const sidebarState = JSON.parse(localStorage.getItem('sidebarState'));
+  if (!sidebarState) return;
+
+  const submenus = document.querySelectorAll('.sidebar-container ul ul');
+  submenus.forEach((submenu, index) => {
+    if (sidebarState[index]) {
+      submenu.classList.remove('hidden');
+    } else {
+      submenu.classList.add('hidden');
+    }
+  });
+}
 
 // Função para fechar o conteúdo que está no "main" quando o usuário clicar no link "Painel de Controle"
 function closeMainContent() {
+  // Limpar a URL da subpágina do localStorage
+  localStorage.removeItem('currentSubpageUrl');
+
   const mainElement = document.getElementById("main");
   mainElement.innerHTML = "";
-  
+
   // Oculta a div #main e exibe o título "Grupo GPS"
   mainElement.style.display = "none";
   document.getElementById("company-title").style.display = "flex";
 }
+
 
 // Função para resetar a sidebar quando o usuário clicar no link "Painel de Controle"
 function resetSidebar() {
@@ -57,6 +89,7 @@ function resetSidebar() {
   submenus.forEach((submenu) => {
     submenu.classList.add('hidden');
   });
+  saveSidebarState(); // Salvar o estado da sidebar
 }
 
 // Função para inicializar a sidebar quando ela for carregada
@@ -69,11 +102,12 @@ function initializeSidebar() {
 
     anchor.addEventListener('click', (event) => {
       event.preventDefault();
-
+  
       const submenu = item.querySelector('ul');
       if (!submenu) return;
-
+  
       submenu.classList.toggle('hidden');
+      saveSidebarState(); // Salvar o estado da sidebar
     });
   });
 
@@ -138,3 +172,10 @@ function logout() {
   window.location.href = '../index.html';
 }
 
+// Carregar a subpágina armazenada no localStorage (se houver) quando a página é carregada
+document.addEventListener('DOMContentLoaded', () => {
+  const currentSubpageUrl = localStorage.getItem('currentSubpageUrl');
+  if (currentSubpageUrl) {
+    loadSubpage(currentSubpageUrl);
+  }
+});
