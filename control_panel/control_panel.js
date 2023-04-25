@@ -25,6 +25,8 @@ loadHTML('./sidebar/sidebar.html', 'sidebar')
 // Carrega o conteúdo do footer.html e insere na seção com o ID "footer"
 loadHTML('./footer/footer.html', 'footer');
 
+
+
 // Função para carregar o conteúdo de uma subpágina	na seção com o ID "main" do control_panel.html
 function loadSubpage(url) {
   // Armazenar a URL da subpágina no localStorage

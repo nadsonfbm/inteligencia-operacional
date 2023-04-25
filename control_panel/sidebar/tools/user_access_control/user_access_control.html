@@ -53,19 +53,36 @@
     <table class="table">
         <thead>
             <tr>
-                <th scope="checkbox"><input type="checkbox"></th>
-                <th scope="id">ID</th>
-                <th scope="">Usuário</th>
-                <th scope="name">Nome</th>
-                <th scope="last-name">Sobrenome</th>
-                <th scope="e-mail">E-mail</th>
-                <th scope="last-login">Último Login</th>
-                <th scope="active">Ativo</th>
-                <th scope="actions">Ações</th>
+                <th scope="col"><input type="checkbox"></th>
+                <th scope="col" class="sortable" data-sort="id" data-sort-direction="asc">ID</th>
+                <th scope="col" class="sortable" data-sort="username">Usuário</th>
+                <th scope="col" class="sortable" data-sort="firstname">Nome</th>
+                <th scope="col" class="sortable" data-sort="lastname">Sobrenome</th>
+                <th scope="col" class="sortable" data-sort="email">E-mail</th>
+                <th scope="col" class="sortable" data-sort="lastLogin">Último Login</th>
+                <th scope="col" class="sortable" data-sort="active">Ativo</th>
+                <th scope="col">Ações</th>
             </tr>
         </thead>
         <tbody>
-            <!-- Insira as linhas da tabela aqui conforme necessário -->
+            <tr>
+                <td>
+                    <input name="username" type="checkbox" value="{{ user.username }}" class="form-check-input">
+                </td>
+                <td>{{ user.id }}</td>
+                <td>{{ user.username }}</td>
+                <td>{{ user.first_name }}</td>
+                <td>{{ user.last_name }}</td>
+                <td>{{ user.email }}</td>
+                <td>{{ user.last_login }}</td>
+                <td>{{ user.is_active }}</td>
+                <td>
+                    <div class="input-group">
+                        <button name="password" type="button" id="{{ user.username }}" onClick="getId(this.id)" data-bs-toggle="modal" data-bs-target="#passwordModal">Senha</button>
+                        <button name="accesses" type="submit" value="{{ user.username }}" form="accesses_form">Acessos</button>
+                    </div>
+                </td>
+            </tr>
         </tbody>
     </table>
     <nav aria-label="Navegação de Página">
