@@ -16,7 +16,6 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  background-color: var(--secondary-color);
 }
 
 body,
@@ -34,9 +33,8 @@ main {
 
 .left-side,
 .right-side {
-  background-color: var(--secondary-color);
+  background-color: var(--primary-color);
   flex: 1;
-  padding: 2rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -45,13 +43,31 @@ main {
 .container-title,
 .container-login {
   background-color: white;
-  padding: 2rem;
-  border-radius: 5px;
+  border-radius: 20px;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
   width: 100%;
-  max-width: 480px;
   min-height: 300px;
-  animation: fadeIn 1s ease-in; 
+  animation: fadeIn 1s ease-in;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 3rem;
+}
+
+.container-title {
+  margin-left: 3rem;
+  margin-right: 1.5rem;
+}
+
+.container-login {
+  margin-left: 1.5rem;
+  margin-right: 3rem;
+}
+
+#login-form {
+  width: 100%;
+  max-width: 20rem;
 }
 
 .title {
@@ -67,17 +83,20 @@ main {
 .phrase {
   font-size: 1rem;
   margin-top: 1.5rem;
+  max-width: 100%;
+  width: 25rem;
+  text-align: center;
 }
 
 .login-text {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   color: var(--primary-color);
   margin-bottom: 0.5rem;
   text-align: center;
 }
 
 .form-label {
-  font-size: 0.7rem;
+  font-size: 1rem;
   display: block;
   margin-bottom: 0.3rem;
 }
@@ -111,14 +130,22 @@ main {
 /* Estilos do footer */
 footer {
   background-color: var(--primary-color);
-  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .footer-container {
+  color: var(--text-color);
+  background-color: white;
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  width: 100%;
   display: flex;
   justify-content: space-between;
-  max-width: 1200px;
-  margin: 0 auto;
+  align-items: center;
+  margin: 3rem;
 }
 
 .footer-column {
@@ -127,7 +154,7 @@ footer {
 }
 
 .footer-column h3 {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   margin-bottom: 1rem;
   text-align: center;
 }
@@ -135,6 +162,8 @@ footer {
 .footer-column p {
   font-size: 0.8rem;
   text-align: center;
+  line-height: 1.4;
+
 }
 
 .developer {
@@ -187,31 +216,129 @@ footer {
     max-width: 100%;
   }
 
-  .container-title,
+  .container-title {
+    max-width: 70%;
+    margin: 1rem;
+    margin-top: 2rem;
+  }
+
   .container-login {
-    max-width: 100%;
+    max-width: 70%;
+    margin: 1rem;
+  }
+
+  .title {
+    font-size: 1.5rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .phrase {
+    font-size: 0.8rem;
+    margin-top: 1rem;
+  }
+
+  .login-text {
+    font-size: 1rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .form-label {
+    font-size: 0.6rem;
+    margin-bottom: 0.2rem;
+  }
+
+  .form-control {
+    margin-bottom: 0.25rem;
+  }
+
+  .submit-button {
+    margin-top: 0.5rem;
   }
 
   .footer-container {
-    flex-wrap: wrap;
+    max-width: 70%;
+    margin: 1rem;
+    margin-bottom: 2rem;
+    padding: 1rem;
   }
 
   .footer-column {
     flex-basis: 50%;
     max-width: 50%;
-    padding: 1rem;
+    line-height: 1.4;
+  }
+
+  .developer img {
+    display: none;
   }
 }
 
 @media screen and (max-width: 768px) {
+
+  
+
+  .title {
+    font-size: 1.2rem; /* Reduzido de 1.5rem para 1.2rem */
+    margin-bottom: 0.25rem;
+  }
+
+  .phrase {
+    font-size: 0.7rem; /* Reduzido de 0.8rem para 0.7rem */
+    width: 15rem; /* Reduzido de 18rem para 15rem */
+    margin-top: 0.8rem; /* Reduzido de 1rem para 0.8rem */
+  }
+
+  .login-text {
+    font-size: 0.9rem; /* Reduzido de 1rem para 0.9rem */
+    margin-bottom: 0.25rem;
+  }
+
+  .form-label {
+    font-size: 0.5rem; /* Reduzido de 0.6rem para 0.5rem */
+    margin-bottom: 0.2rem;
+  }
+
+  .form-control {
+    padding: 0.4rem; /* Reduzido de 0.5rem para 0.4rem */
+    margin-bottom: 0.2rem; /* Reduzido de 0.25rem para 0.2rem */
+  }
+
+  .submit-button {
+    padding: 0.4rem 0.8rem; /* Reduzido de 0.5rem 1rem para 0.4rem 0.8rem */
+    font-size: 0.9rem; /* Reduzido de 1rem para 0.9rem */
+    margin-top: 0.5rem;
+  }
+
+  footer {
+    padding: 0.5rem;
+  }
+
   .footer-column {
     flex-basis: 100%;
     max-width: 100%;
-    padding: 1rem;
+    padding: 0.5rem;
     text-align: center;
+  }
+
+  .footer-column h3 {
+    font-size: 1rem; /* Reduzido de 1.2rem para 1rem */
+    margin-bottom: 0.2rem; /* Reduzido de 1rem para 0.5rem */
+  }
+
+  .footer-column p {
+    font-size: 0.7rem; /* Reduzido de 0.8rem para 0.7rem */
   }
 
   .developer {
     justify-content: center;
+  }
+
+  .developer img {
+    width: 1.0rem; /* Reduzido de 1.5rem para 1.2rem */
+    height: 1.0rem; /* Reduzido de 1.5rem para 1.2rem */
+  }
+
+  #developer-column {
+    display: none;
   }
 }
