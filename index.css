@@ -44,64 +44,68 @@ main {
 
 .container-title,
 .container-login {
-  background-color: #212121;
+  background-color: white;
   padding: 2rem;
   border-radius: 5px;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
   width: 100%;
   max-width: 480px;
-  max-height: 350px;
-  animation: fadeIn 1s ease-in;
+  min-height: 300px;
+  animation: fadeIn 1s ease-in; 
 }
 
 .title {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  text-align: center;
 }
 
 .text-primary {
-  color: #007BFF;
+  color: var(--primary-color);
 }
 
 .phrase {
   font-size: 1rem;
-  margin-top: 1rem;
+  margin-top: 1.5rem;
 }
 
 .login-text {
-  font-size: 1.5rem;
-  color: #007BFF;
-  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+  text-align: center;
 }
 
 .form-label {
-  font-size: 1rem;
+  font-size: 0.7rem;
   display: block;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.3rem;
 }
 
 .form-control {
   display: block;
   width: 100%;
   padding: 0.5rem;
-  border: 1px solid #ced4da;
+  border: 1px solid #7d8389;
   border-radius: 5px;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
   color: var(--text-color);
 }
 
 .submit-button {
-  background-color: #007BFF;
+  background-color: var(--primary-color);
+  margin-top: 1rem;
   padding: 0.5rem 1rem;
   font-size: 1rem;
   border: none;
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  width: 100%;
 }
 
 .submit-button:hover {
-  background-color: #0069D9;
+  background-color: #4ea3ed;
 }
 
 /* Estilos do footer */
@@ -135,7 +139,7 @@ footer {
 
 .developer {
   display: flex;
-  align-items: left;
+  align-items: center;
   flex-direction: column;
 }
 
